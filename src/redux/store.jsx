@@ -4,6 +4,16 @@ import rootReducer from "./rootReducer";
 
 const middlewares = [logger];
 
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+const initialStore = {
+  cartReducer: {
+    cartItems: JSON.parse(localStorage.getItem("cartItems")) ?? [],
+  },
+};
+
+const store = createStore(
+  rootReducer,
+  initialStore,
+  applyMiddleware(...middlewares)
+);
 
 export default store;

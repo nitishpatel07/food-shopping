@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonAdd from "../../ButtonAdd";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const MenuCard = ({ item }) => {
   const { id, name, info, price, img } = item;
@@ -38,6 +39,11 @@ const MenuCard = ({ item }) => {
       payload: item,
     });
   };
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    console.log(`change`);
+  }, [cartItems]);
 
   return (
     <div className="bg-white item flex flex-col text-center md:p-3.5 p-2 rounded-md drop-shadow-md">
