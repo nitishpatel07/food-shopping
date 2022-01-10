@@ -42,7 +42,6 @@ const MenuCard = ({ item }) => {
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    console.log(`change`);
   }, [cartItems]);
 
   return (

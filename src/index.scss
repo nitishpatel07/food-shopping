@@ -48,6 +48,14 @@ body {
   }
 }
 
+.btn-signup {
+  @apply font-medium p-3 bg-black w-36 md:text-lg text-lg text-white rounded;
+  font-weight: 700;
+  &:hover {
+    @apply bg-white text-black outline outline-black;
+  }
+}
+
 .logo-heading {
   @apply md:text-4xl text-2xl;
   font-weight: 700;
