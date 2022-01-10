@@ -62,7 +62,6 @@ const MenuCard = ({ item }) => {
           handleCartAddItem={() => addToCart(item)}
           handleCartRemoveItem={() => removeFromCart(item)}
         />
-        {/* <button onClick={() => addToCart(item)}>ADD</button> */}
       </div>
     </div>
   );

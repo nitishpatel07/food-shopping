@@ -72,6 +72,7 @@ const SignIn = () => {
             label="Email Id"
             placeholder="Email Id"
             name="email"
+            type="email"
             value={email}
             onChange={handleInputChange}
           />
@@ -80,6 +81,7 @@ const SignIn = () => {
             label="Password"
             placeholder="Password"
             name="password"
+            type="password"
             value={password}
             onChange={handleInputChange}
           />
